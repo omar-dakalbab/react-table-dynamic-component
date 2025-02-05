@@ -4,5 +4,5 @@ A customizable table component for React, supporting pagination, sorting, filter
 
 ## Installation
 ```bash
-npm install react-table-component
+npm install react-table-dynamic-component
 
