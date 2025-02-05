@@ -1,28 +1,23 @@
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import "./style.css";
-import axios from "axios";
 
-const TableComponent = ({ pageSizeOptions = [10000, 50000, 200000] }) => {
-  const [data, setData] = useState([]);
-  const [headers, setHeaders] = useState([]);
-
-  const getDummyData = async () => {
-    try {
-      const dt = await axios.get(
-        "https://microsoftedge.github.io/Demos/json-dummy-data/5MB-min.json"
-      );
-      const formattedData = dt.data.map((x, key) => ({ ...x, key: key }));
-      setHeaders(Object.keys(formattedData[0]));
-      const allValuesArray = formattedData.map((item) => Object.values(item));
-      setData(allValuesArray);
-    } catch (ex) {
-      console.log(ex);
-    }
-  };
-
-  useEffect(() => {
-    getDummyData();
-  }, []);
+const TableComponent = ({ pageSizeOptions = [10, 50, 200], data, headers }) => {
+  if (!data || !headers)
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <h2>
+          Please provide `data` and `headers` to the TableComponent component.
+          Read me for more information.
+        </h2>
+      </div>
+    );
 
   const tableRef = useRef(null);
 
