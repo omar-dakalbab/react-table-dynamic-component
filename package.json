@@ -1,6 +1,6 @@
 {
   "name": "react-table-dynamic-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "TableComponent.js",
   "scripts": {
     "start": "react-scripts start",
