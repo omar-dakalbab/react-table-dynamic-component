@@ -1,0 +1,147 @@
+/* Wrapper and Controls */
+.table-wrapper {
+  width: 100%;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 5px;
+}
+
+.global-filter {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.btn-clear,
+.btn-export {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-clear:hover,
+.btn-export:hover {
+  background: #0056b3;
+}
+
+/* Table Container and Table */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table Header */
+th {
+  padding: 12px 16px;
+  background: #007bff;
+  color: white;
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  min-width: 120px;
+  user-select: none;
+}
+
+th.header-sort {
+  cursor: pointer;
+}
+
+th .sort-indicator {
+  margin-left: 5px;
+}
+
+/* Column Filter Input */
+.filter-row input.column-filter {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Table Data */
+td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Row Hover */
+tbody tr:hover {
+  background: rgba(0, 123, 255, 0.1);
+}
+
+/* Resizable Column */
+.resizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  cursor: col-resize;
+  background: transparent;
+  transition: background 0.2s ease-in-out;
+}
+
+.resizer:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 5px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #007bff;
+  background: white;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button.active,
+.pagination button:hover {
+  background: #007bff;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination select {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
